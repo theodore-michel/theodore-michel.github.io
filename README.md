@@ -41,24 +41,12 @@ bundle exec jekyll serve --livereload --config _config.yml,_config_preview.yml
 
 To publish a section, set it to `true` and push.
 
-## Publish on GitHub Pages
+## Publishing
 
-The code lives in the **private** repository `theodore-michel/personal-website`, and
-nothing is published yet. (A repo named `<username>.github.io` gets GitHub Pages turned on
-automatically, which can't be switched off. That's why it has a different name for now.)
-
-When the content is ready:
-
-1. **Settings → General**: rename the repository to `theodore-michel.github.io`.
-2. **Settings → General → Danger Zone → Change visibility**: make it **public**
-   (a free GitHub plan only publishes Pages from public repositories).
-3. **Settings → Pages → Build and deployment → Source**: choose **GitHub Actions**.
-4. **Actions → "Deploy site to GitHub Pages" → Run workflow** (or push any commit).
-   The site goes live at `https://theodore-michel.github.io` a minute or two later,
-   and every later push to `main` redeploys it.
-
-The workflow in `.github/workflows/pages.yml` skips deployment while the repo is private,
-so pushing work-in-progress edits before then is safe.
+The site is live at **https://theodore-michel.github.io**, built from the public repository
+`theodore-michel/theodore-michel.github.io` by `.github/workflows/pages.yml`.
+Every push to `main` redeploys it within a minute or two; follow progress in the repo's
+**Actions** tab.
 
 ## Preview locally
 
