@@ -25,18 +25,22 @@ Search the repo for `TODO` to find every placeholder.
 
 ## Publish on GitHub Pages
 
-1. Create a **public** GitHub repository named exactly `<your-username>.github.io`.
-2. Push this folder to it:
-   ```bash
-   git remote add origin https://github.com/<your-username>/<your-username>.github.io.git
-   git push -u origin main
-   ```
-3. On GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-4. The site goes live at `https://<your-username>.github.io` a minute or two later.
-   Every later push to `main` redeploys it automatically.
+The code lives in the **private** repository `theodore-michel/personal-website`, and
+nothing is published yet. (A repo named `<username>.github.io` gets GitHub Pages turned on
+automatically, which can't be switched off. That's why it has a different name for now.)
 
-If the repository has a different name, the site is served from
-`https://<your-username>.github.io/<repo-name>/`. The workflow sets the base URL for you.
+When the content is ready:
+
+1. **Settings → General**: rename the repository to `theodore-michel.github.io`.
+2. **Settings → General → Danger Zone → Change visibility**: make it **public**
+   (a free GitHub plan only publishes Pages from public repositories).
+3. **Settings → Pages → Build and deployment → Source**: choose **GitHub Actions**.
+4. **Actions → "Deploy site to GitHub Pages" → Run workflow** (or push any commit).
+   The site goes live at `https://theodore-michel.github.io` a minute or two later,
+   and every later push to `main` redeploys it.
+
+The workflow in `.github/workflows/pages.yml` skips deployment while the repo is private,
+so pushing work-in-progress edits before then is safe.
 
 ## Preview locally
 
