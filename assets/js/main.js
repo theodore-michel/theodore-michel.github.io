@@ -47,17 +47,19 @@
     });
   });
 
-  // ---- Expand / collapse older news ----
-  var newsBtn = document.querySelector(".news-toggle");
-  if (newsBtn) {
-    newsBtn.addEventListener("click", function () {
-      var expand = newsBtn.getAttribute("aria-expanded") !== "true";
-      document.querySelectorAll(".news-more").forEach(function (li) { li.hidden = !expand; });
-      newsBtn.setAttribute("aria-expanded", expand);
-      newsBtn.title = expand ? "Show less" : "Show older news";
-      newsBtn.setAttribute("aria-label", newsBtn.title);
+  // ---- "•••" buttons that reveal the rest of a list ----
+  document.querySelectorAll("[data-more]").forEach(function (btn) {
+    var list = document.getElementById(btn.dataset.more);
+    if (!list) return;
+    var label = btn.title;
+    btn.addEventListener("click", function () {
+      var expand = btn.getAttribute("aria-expanded") !== "true";
+      list.querySelectorAll(".more").forEach(function (li) { li.hidden = !expand; });
+      btn.setAttribute("aria-expanded", expand);
+      btn.title = expand ? "Show less" : label;
+      btn.setAttribute("aria-label", btn.title);
     });
-  }
+  });
 
   // ---- Publication type filters ----
   var filters = document.querySelectorAll(".filter");

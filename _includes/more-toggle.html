@@ -1,0 +1,7 @@
+{% comment %}
+  "•••" button that reveals the hidden (class="more") items of a list.
+  Usage: {% include more-toggle.html target="list-id" label="Show older news" %}
+{% endcomment %}
+<button class="more-toggle" data-more="{{ include.target }}" aria-expanded="false" aria-controls="{{ include.target }}" aria-label="{{ include.label }}" title="{{ include.label }}">
+  <span class="dots" aria-hidden="true">•••</span><span class="less"><i class="fa-solid fa-chevron-up"></i> Show less</span>
+</button>

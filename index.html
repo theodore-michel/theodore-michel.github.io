@@ -49,13 +49,11 @@ layout: default
   <ul class="news" id="news-list">
     {% for n in site.data.news %}
     {% assign d = n.date | split: "-" %}
-    <li{% if forloop.index > news_shown %} class="news-more" hidden{% endif %}><span class="date-badge">{{ d[1] }} / {{ d[0] }}</span><span>{{ n.text | markdownify | remove: "<p>" | remove: "</p>" }}</span></li>
+    <li{% if forloop.index > news_shown %} class="more" hidden{% endif %}><span class="date-badge">{{ d[1] }} / {{ d[0] }}</span><span>{{ n.text | markdownify | remove: "<p>" | remove: "</p>" }}</span></li>
     {% endfor %}
   </ul>
   {% if site.data.news.size > news_shown %}
-  <button class="news-toggle" aria-expanded="false" aria-controls="news-list" aria-label="Show older news" title="Show older news">
-    <span class="dots" aria-hidden="true">•••</span><span class="less"><i class="fa-solid fa-chevron-up"></i> Show less</span>
-  </button>
+  {% include more-toggle.html target="news-list" label="Show older news" %}
   {% endif %}
 </section>
 
@@ -81,5 +79,5 @@ layout: default
     <h2 class="section-title">CV at a glance</h2>
     <a class="btn btn-ghost" href="{{ '/cv/' | relative_url }}">Full CV <i class="fa-solid fa-arrow-right"></i></a>
   </div>
-  {% include cv-summary.html %}
+  {% include cv-summary.html limit=3 %}
 </section>

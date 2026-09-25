@@ -239,19 +239,19 @@ section { margin: 0 0 44px; }
   font-variant-numeric: tabular-nums;
 }
 
-.news li[hidden] { display: none; }
-.news-toggle {
+.news li[hidden], .timeline li[hidden] { display: none; }
+.more-toggle {
   display: inline-flex; align-items: center; gap: 6px; margin: 6px 0 0;
   padding: 2px 12px; border-radius: 999px; cursor: pointer;
   border: 1px solid var(--border); background: var(--bg-soft); color: var(--muted);
   font-family: var(--font-head); font-size: .85rem; line-height: 1.6;
   transition: color .15s, border-color .15s;
 }
-.news-toggle:hover { color: var(--accent); border-color: var(--accent); }
-.news-toggle .dots { letter-spacing: 2px; font-size: .7rem; }
-.news-toggle .less { display: none; }
-.news-toggle[aria-expanded="true"] .dots { display: none; }
-.news-toggle[aria-expanded="true"] .less { display: inline; }
+.more-toggle:hover { color: var(--accent); border-color: var(--accent); }
+.more-toggle .dots { letter-spacing: 2px; font-size: .7rem; }
+.more-toggle .less { display: none; }
+.more-toggle[aria-expanded="true"] .dots { display: none; }
+.more-toggle[aria-expanded="true"] .less { display: inline; }
 
 /* ============================================================
    CV summary

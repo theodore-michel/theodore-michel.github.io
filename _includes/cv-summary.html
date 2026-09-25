@@ -1,10 +1,15 @@
+{% comment %}
+  Education + experience timelines. Pass limit=N to show only the first N items
+  of each list, with a "•••" button to reveal the rest (used on the home page).
+{% endcomment %}
 {% assign cv = site.data.cv %}
+{% assign limit = include.limit | default: 1000 %}
 <div class="cv-grid">
   <div class="cv-block">
     <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
-    <ul class="timeline">
+    <ul class="timeline" id="cv-education">
       {% for e in cv.education %}
-      <li>
+      <li{% if forloop.index > limit %} class="more" hidden{% endif %}>
         <span class="tl-when">{{ e.when }}</span>
         <span class="tl-what">{{ e.what }}</span>
         <span class="tl-where">{{ e.where }}</span>
@@ -12,12 +17,13 @@
       </li>
       {% endfor %}
     </ul>
+    {% if cv.education.size > limit %}{% include more-toggle.html target="cv-education" label="Show all education" %}{% endif %}
   </div>
   <div class="cv-block">
     <h3><i class="fa-solid fa-briefcase"></i> Experience</h3>
-    <ul class="timeline">
+    <ul class="timeline" id="cv-experience">
       {% for e in cv.experience %}
-      <li>
+      <li{% if forloop.index > limit %} class="more" hidden{% endif %}>
         <span class="tl-when">{{ e.when }}</span>
         <span class="tl-what">{{ e.what }}</span>
         <span class="tl-where">{{ e.where }}</span>
@@ -25,6 +31,7 @@
       </li>
       {% endfor %}
     </ul>
+    {% if cv.experience.size > limit %}{% include more-toggle.html target="cv-experience" label="Show all experience" %}{% endif %}
   </div>
   {% if include.full and cv.awards %}
   <div class="cv-block">
