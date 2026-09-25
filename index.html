@@ -44,14 +44,6 @@ layout: default
 </section>
 
 <section>
-  <div class="section-head">
-    <h2 class="section-title">CV at a glance</h2>
-    <a class="btn btn-ghost" href="{{ '/cv/' | relative_url }}">Full CV <i class="fa-solid fa-arrow-right"></i></a>
-  </div>
-  {% include cv-summary.html %}
-</section>
-
-<section>
   <h2 class="section-title">News</h2>
   <ul class="news">
     {% for n in site.data.news %}
@@ -77,3 +69,11 @@ layout: default
   </ul>
 </section>
 {% endif %}
+
+<section>
+  <div class="section-head">
+    <h2 class="section-title">CV at a glance</h2>
+    <a class="btn btn-ghost" href="{{ '/cv/' | relative_url }}">Full CV <i class="fa-solid fa-arrow-right"></i></a>
+  </div>
+  {% include cv-summary.html %}
+</section>
