@@ -1,0 +1,10 @@
+{% assign items = site.data.projects | where: "status", include.status %}
+<div class="cards">
+  {% for p in items %}
+  <article class="card">
+    <h3>{% if p.link %}<a href="{{ p.link | relative_url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</h3>
+    <p>{{ p.summary }}</p>
+    {% if p.tags %}<p class="card-tags">{% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}</p>{% endif %}
+  </article>
+  {% endfor %}
+</div>

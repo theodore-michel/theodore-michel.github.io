@@ -1,0 +1,32 @@
+{% comment %}
+  Icon buttons for contact / profiles. Each one performs an action:
+  email opens your mail client, the others open the profile in a new tab.
+  Configure them under `social:` in _config.yml.
+{% endcomment %}
+{% assign s = site.social %}
+<ul class="social {{ include.class }}">
+  {% if s.email %}
+  <li><a class="icon-btn" href="mailto:{{ s.email }}" title="Email me" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+  {% endif %}
+  {% if s.github %}
+  <li><a class="icon-btn" href="https://github.com/{{ s.github }}" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+  {% endif %}
+  {% if s.scholar %}
+  <li><a class="icon-btn" href="https://scholar.google.com/citations?user={{ s.scholar }}" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a></li>
+  {% endif %}
+  {% if s.linkedin %}
+  <li><a class="icon-btn" href="https://www.linkedin.com/in/{{ s.linkedin }}" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+  {% endif %}
+  {% if s.orcid and s.orcid != "" %}
+  <li><a class="icon-btn" href="https://orcid.org/{{ s.orcid }}" target="_blank" rel="noopener" title="ORCID" aria-label="ORCID"><i class="ai ai-orcid"></i></a></li>
+  {% endif %}
+  {% if s.twitter and s.twitter != "" %}
+  <li><a class="icon-btn" href="https://x.com/{{ s.twitter }}" target="_blank" rel="noopener" title="X / Twitter" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></li>
+  {% endif %}
+  {% if s.bluesky and s.bluesky != "" %}
+  <li><a class="icon-btn" href="https://bsky.app/profile/{{ s.bluesky }}" target="_blank" rel="noopener" title="Bluesky" aria-label="Bluesky"><i class="fa-brands fa-bluesky"></i></a></li>
+  {% endif %}
+  {% if include.cv and site.author.cv_pdf %}
+  <li><a class="icon-btn" href="{{ site.author.cv_pdf | relative_url }}" download title="Download CV (PDF)" aria-label="Download CV"><i class="fa-solid fa-file-arrow-down"></i></a></li>
+  {% endif %}
+</ul>

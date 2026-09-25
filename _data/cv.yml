@@ -1,0 +1,34 @@
+# The "CV at a glance" summary on the home page and CV page.
+# Keep it short — the full details live in your PDF.
+
+education:
+  - when: 2025 – present
+    what: PhD in Your Field
+    where: Your University
+    detail: Advised by Prof. Advisor Name
+  - when: 2023 – 2025
+    what: MSc in Your Field
+    where: Another University
+  - when: 2020 – 2023
+    what: BSc in Your Field
+    where: Undergraduate University
+
+experience:
+  - when: Summer 2024
+    what: Research Intern
+    where: Company or Lab
+    detail: One-line description of what you did.
+  - when: 2022 – 2023
+    what: Research Assistant
+    where: Lab Name
+
+awards:
+  - when: 2025
+    what: Fellowship or Award Name
+  - when: 2023
+    what: Best Poster Award, Event Name
+
+skills:
+  - Python, PyTorch, JAX
+  - C++, CUDA
+  - LaTeX, Git, Linux

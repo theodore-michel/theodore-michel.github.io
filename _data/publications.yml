@@ -1,0 +1,68 @@
+# Publications, preprints and workshop papers — newest first.
+# `type` is one of: conference | journal | preprint | workshop
+# Every field except title/authors/venue/year/type is optional; links that are
+# left out simply don't render. Put thumbnails in assets/img/pubs/.
+# Author names listed in `author.aliases` (_config.yml) are bolded automatically.
+
+- id: example-preprint-2026
+  type: preprint
+  title: "Placeholder Title of My Latest Preprint"
+  authors: [Theodore Michel, Jane Collaborator, John Advisor]
+  venue: arXiv preprint
+  year: 2026
+  image:  # e.g. /assets/img/pubs/preprint2026.png
+  links:
+    arxiv: https://arxiv.org/abs/0000.00000
+    code: https://github.com/theodore-michel
+  abstract: >-
+    One or two paragraphs describing the problem, the method and the main
+    result. This text is revealed when a visitor clicks "abstract".
+  bibtex: |
+    @article{michel2026placeholder,
+      title   = {Placeholder Title of My Latest Preprint},
+      author  = {Michel, Theodore and Collaborator, Jane and Advisor, John},
+      journal = {arXiv preprint arXiv:0000.00000},
+      year    = {2026}
+    }
+
+- id: example-conference-2025
+  type: conference
+  title: "Placeholder Title of a Conference Paper"
+  authors: [Jane Collaborator, Theodore Michel, John Advisor]
+  venue: Conference Name (e.g. NeurIPS)
+  year: 2025
+  note: "(Oral)"
+  links:
+    pdf: https://example.org/paper.pdf
+    project: https://example.org
+    code: https://github.com/theodore-michel
+    slides: https://example.org/slides.pdf
+  abstract: >-
+    Short abstract of the conference paper.
+  bibtex: |
+    @inproceedings{collaborator2025placeholder,
+      title     = {Placeholder Title of a Conference Paper},
+      author    = {Collaborator, Jane and Michel, Theodore and Advisor, John},
+      booktitle = {Conference Name},
+      year      = {2025}
+    }
+
+- id: example-journal-2024
+  type: journal
+  title: "Placeholder Title of a Journal Article"
+  authors: [Theodore Michel, John Advisor]
+  venue: Journal Name
+  year: 2024
+  links:
+    pdf: https://example.org/article.pdf
+  abstract: >-
+    Short abstract of the journal article.
+
+- id: example-workshop-2024
+  type: workshop
+  title: "Placeholder Title of a Workshop Paper"
+  authors: [Theodore Michel, Jane Collaborator]
+  venue: Workshop Name @ Conference
+  year: 2024
+  links:
+    pdf: https://example.org/workshop.pdf

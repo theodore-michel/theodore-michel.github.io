@@ -1,0 +1,26 @@
+---
+layout: page
+title: Curriculum Vitae
+permalink: /cv/
+---
+{% assign pdf = site.author.cv_pdf | relative_url %}
+<div class="cv-actions">
+  <a class="btn" href="{{ pdf }}" download><i class="fa-solid fa-file-arrow-down"></i> Download PDF</a>
+  <a class="btn btn-ghost" href="{{ pdf }}" target="_blank" rel="noopener"><i class="fa-solid fa-up-right-from-square"></i> Open in new tab</a>
+  <span class="muted small">Last updated {{ site.time | date: "%B %Y" }}</span>
+</div>
+
+<section>
+  <h2 class="section-title">Summary</h2>
+  {% include cv-summary.html full=true %}
+</section>
+
+<section>
+  <h2 class="section-title">Full CV</h2>
+  <object class="pdf-viewer" data="{{ pdf }}#view=FitH" type="application/pdf" aria-label="CV PDF">
+    <p class="pdf-fallback">
+      Your browser can't display PDFs inline.
+      <a href="{{ pdf }}" download>Download the CV</a> instead.
+    </p>
+  </object>
+</section>

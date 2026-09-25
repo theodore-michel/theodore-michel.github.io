@@ -1,0 +1,25 @@
+---
+layout: page
+title: Adventures
+subtitle: Life outside the lab — trips, trails, races and other things that got me away from the screen.
+permalink: /adventures/
+---
+<div class="adventures">
+  {% for adv in site.data.adventures %}
+  {% assign d = adv.date | split: "-" %}
+  <article class="adv">
+    <div class="adv-media">
+      {% if adv.image %}
+        <img src="{{ adv.image | relative_url }}" alt="{{ adv.title }}" loading="lazy">
+      {% else %}
+        <div class="adv-placeholder" aria-hidden="true"><i class="fa-solid {{ adv.icon | default: 'fa-mountain-sun' }}"></i></div>
+      {% endif %}
+    </div>
+    <div class="adv-body">
+      <p class="adv-meta"><span class="date-badge">{{ d[1] }} / {{ d[0] }}</span> <i class="fa-solid fa-location-dot"></i> {{ adv.location }}</p>
+      <h3>{% if adv.link %}<a href="{{ adv.link | relative_url }}">{{ adv.title }}</a>{% else %}{{ adv.title }}{% endif %}</h3>
+      <p>{{ adv.text }}</p>
+    </div>
+  </article>
+  {% endfor %}
+</div>

@@ -1,0 +1,37 @@
+# Personal adventures: trips, hikes, races, hobbies... newest first.
+# Put photos in assets/img/adventures/ (landscape, ~1200px wide is plenty).
+# `link` is optional (e.g. a blog post or photo album).
+
+- title: "Hiking Somewhere Beautiful"
+  date: 2026-08
+  location: Mountain Range, Country
+  icon: fa-person-hiking
+  image:  # /assets/img/adventures/hike.jpg
+  text: >-
+    A few sentences about the trip — what made it memorable, what went wrong,
+    what you'd do again.
+
+- title: "First Marathon"
+  date: 2026-04
+  location: City, Country
+  icon: fa-person-running
+  image:
+  text: >-
+    Training log, finishing time, and lessons learned.
+
+- title: "Road Trip"
+  date: 2025-07
+  location: Region, Country
+  icon: fa-car-side
+  image:
+  text: >-
+    Two weeks, three countries, one very old car.
+  link: /blog/
+
+- title: "Sailing Weekend"
+  date: 2025-05
+  location: Coast, Country
+  icon: fa-sailboat
+  image:
+  text: >-
+    Learning the ropes (literally).

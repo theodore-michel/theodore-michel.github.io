@@ -1,0 +1,45 @@
+{% assign cv = site.data.cv %}
+<div class="cv-grid">
+  <div class="cv-block">
+    <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+    <ul class="timeline">
+      {% for e in cv.education %}
+      <li>
+        <span class="tl-when">{{ e.when }}</span>
+        <span class="tl-what">{{ e.what }}</span>
+        <span class="tl-where">{{ e.where }}</span>
+        {% if e.detail %}<span class="tl-detail">{{ e.detail }}</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="cv-block">
+    <h3><i class="fa-solid fa-briefcase"></i> Experience</h3>
+    <ul class="timeline">
+      {% for e in cv.experience %}
+      <li>
+        <span class="tl-when">{{ e.when }}</span>
+        <span class="tl-what">{{ e.what }}</span>
+        <span class="tl-where">{{ e.where }}</span>
+        {% if e.detail %}<span class="tl-detail">{{ e.detail }}</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% if include.full %}
+  <div class="cv-block">
+    <h3><i class="fa-solid fa-award"></i> Awards</h3>
+    <ul class="timeline">
+      {% for e in cv.awards %}
+      <li><span class="tl-when">{{ e.when }}</span><span class="tl-what">{{ e.what }}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="cv-block">
+    <h3><i class="fa-solid fa-screwdriver-wrench"></i> Skills</h3>
+    <ul class="plain-list">
+      {% for s in cv.skills %}<li>{{ s }}</li>{% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</div>

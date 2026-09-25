@@ -1,0 +1,60 @@
+---
+layout: page
+title: Research
+subtitle: What I'm working on, what I've published, and where I've talked about it.
+permalink: /research/
+---
+<nav class="toc" aria-label="On this page">
+  <a href="#current">Current work</a>
+  <a href="#publications">Publications &amp; preprints</a>
+  <a href="#talks">Talks</a>
+  <a href="#past">Past projects</a>
+</nav>
+
+<section id="current">
+  <h2 class="section-title">Current work</h2>
+  {% include project-cards.html status="current" %}
+</section>
+
+<section id="publications">
+  <div class="section-head">
+    <h2 class="section-title">Publications &amp; preprints</h2>
+    {% if site.social.scholar %}
+    <a class="btn btn-ghost" href="https://scholar.google.com/citations?user={{ site.social.scholar }}" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Google Scholar</a>
+    {% endif %}
+  </div>
+  <div class="filters" role="group" aria-label="Filter publications">
+    <button class="filter active" data-filter="all" aria-pressed="true">All</button>
+    <button class="filter" data-filter="conference" aria-pressed="false">Conference</button>
+    <button class="filter" data-filter="journal" aria-pressed="false">Journal</button>
+    <button class="filter" data-filter="preprint" aria-pressed="false">Preprints</button>
+    <button class="filter" data-filter="workshop" aria-pressed="false">Workshop</button>
+  </div>
+  <div class="pub-list">
+    {% for pub in site.data.publications %}
+      {% include publication.html pub=pub %}
+    {% endfor %}
+  </div>
+</section>
+
+<section id="talks">
+  <h2 class="section-title">Talks</h2>
+  <ul class="news talks">
+    {% for t in site.data.talks %}
+    {% assign d = t.date | split: "-" %}
+    <li>
+      <span class="date-badge">{{ d[1] }} / {{ d[0] }}</span>
+      <span>
+        <strong>{{ t.title }}</strong> @ {{ t.event }}{% if t.location %}, {{ t.location }}{% endif %}.
+        {% if t.links.slides %}<a class="chip chip-sm" href="{{ t.links.slides }}" target="_blank" rel="noopener"><i class="fa-solid fa-person-chalkboard"></i> slides</a>{% endif %}
+        {% if t.links.video %}<a class="chip chip-sm" href="{{ t.links.video }}" target="_blank" rel="noopener"><i class="fa-solid fa-play"></i> video</a>{% endif %}
+      </span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="past">
+  <h2 class="section-title">Past projects</h2>
+  {% include project-cards.html status="past" %}
+</section>

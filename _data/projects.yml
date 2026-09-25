@@ -1,0 +1,23 @@
+# Things you're working on (status: current) or have worked on (status: past).
+# Current ones appear on the home page and at the top of the Research page.
+
+- title: "Current Project One"
+  status: current
+  summary: >-
+    One or two sentences on the question you're exploring and why it matters.
+  tags: [topic-a, topic-b]
+  link:   # optional: repo, project page, or blog post
+
+- title: "Current Project Two"
+  status: current
+  summary: >-
+    Another ongoing line of work. Keep it short — link out for details.
+  tags: [topic-c]
+  link: https://github.com/theodore-michel
+
+- title: "Past Project"
+  status: past
+  summary: >-
+    A finished project worth showcasing (a thesis, a tool, an open-source library...).
+  tags: [topic-a]
+  link: https://github.com/theodore-michel

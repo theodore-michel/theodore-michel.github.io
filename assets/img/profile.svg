@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Placeholder portrait. Replace with your photo (e.g. assets/img/profile.jpg)
+       and update `author.photo` in _config.yml. -->
+  <rect width="400" height="400" fill="#dfe6ee"/>
+  <circle cx="200" cy="160" r="72" fill="#aab8c8"/>
+  <path d="M60 400c0-80 62-138 140-138s140 58 140 138z" fill="#aab8c8"/>
+  <text x="200" y="378" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#5f6f82">Your photo here</text>
+</svg>

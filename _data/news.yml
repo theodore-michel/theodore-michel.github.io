@@ -1,0 +1,10 @@
+# Short news items for the home page — newest first. `text` accepts Markdown.
+
+- date: 2026-09
+  text: "Launched this website! 🎉"
+- date: 2026-06
+  text: "Our paper **Placeholder Title** was accepted to [Conference](https://example.org)."
+- date: 2026-03
+  text: "Released a new preprint on [arXiv](https://arxiv.org)."
+- date: 2025-10
+  text: "Started a PhD at Your Lab, Your University."

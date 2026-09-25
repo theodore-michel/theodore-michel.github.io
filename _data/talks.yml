@@ -1,0 +1,16 @@
+# Talks, posters and presentations — newest first.
+
+- date: 2026-05
+  title: "Placeholder Talk Title"
+  event: Seminar Name
+  location: University, City, Country
+  links:
+    slides: https://example.org/slides.pdf
+    video: https://youtube.com
+
+- date: 2025-11
+  title: "Placeholder Poster Title"
+  event: Conference Name (poster)
+  location: City, Country
+  links:
+    slides: https://example.org/poster.pdf
