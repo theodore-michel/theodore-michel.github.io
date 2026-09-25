@@ -1,6 +1,5 @@
 # Talks, posters and presentations — newest first.
 # Pre-filled from the conference contributions on Google Scholar / HAL.
-# TODO: check the format (talk vs poster) and add slides/video links if you have them.
 
 - date: 2025-02
   title: "Graph neural networks for CFD space and time prediction: an application to solar panels"
@@ -8,7 +7,6 @@
   location: Paris, France
   links:
     slides:
-    video:
 
 - date: 2024-07
   title: "Deep reinforcement learning-based flow optimization for improved wind resilience of solar panel arrays"

@@ -1,6 +1,5 @@
 # ---------------------------------------------------------------
 #  Site settings — edit these first.
-#  Anything marked TODO is a placeholder you should replace.
 # ---------------------------------------------------------------
 
 title: Théodore Michel
@@ -22,8 +21,8 @@ author:
   affiliation: Physics of Fluids group, University of Twente
   affiliation_url: "https://pof.tnw.utwente.nl/"
   location: Enschede, the Netherlands
-  photo: /assets/img/profile.svg  # TODO: replace with e.g. /assets/img/profile.jpg (square, ≥ 400px)
-  cv_pdf: /assets/cv/cv.pdf       # TODO: drop your real CV at this path
+  photo: /assets/img/profile.png
+  cv_pdf: /assets/cv/cv.pdf
 
 # Contact / social links — shown as icon buttons on the home page and footer.
 # Remove a line (or leave it empty) to hide that icon.
@@ -31,12 +30,19 @@ social:
   email: theodore.michel@utwente.nl
   github: theodore-michel                                        # GitHub username
   scholar: "sjxk_lMAAAAJ"
-  linkedin: "your-linkedin-handle"                               # TODO: linkedin.com/in/<handle>
+  linkedin: "theodore-michel-bb0192174"                          # just the part after linkedin.com/in/
   orcid: "0009-0004-1161-7337"
   twitter: ""                                                    # optional, X/Twitter handle without @
   bluesky: ""                                                    # optional, e.g. you.bsky.social
 
-# Top navigation bar
+# Sections you can switch on or off. `false` removes the section entirely:
+# its pages, its link in the nav bar and (for the blog) the posts and RSS feed.
+# You can keep editing the content while it's hidden; flip to `true` to publish.
+sections:
+  blog: false
+  adventures: false
+
+# Top navigation bar. Items with `section:` only show when that section is on.
 nav:
   - title: Home
     url: /
@@ -44,10 +50,12 @@ nav:
     url: /research/
   - title: Blog
     url: /blog/
+    section: blog
   - title: CV
     url: /cv/
   - title: Adventures
     url: /adventures/
+    section: adventures
 
 # ---------------------------------------------------------------
 #  Build settings — you normally don't need to touch these.

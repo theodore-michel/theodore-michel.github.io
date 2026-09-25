@@ -1,0 +1,6 @@
+# Local preview only: shows hidden sections while you work on them.
+#   bundle exec jekyll serve --livereload --config _config.yml,_config_preview.yml
+# This file is never used by the live site.
+sections:
+  blog: true
+  adventures: true

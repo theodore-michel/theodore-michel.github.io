@@ -26,7 +26,7 @@
       {% endfor %}
     </ul>
   </div>
-  {% if include.full %}
+  {% if include.full and cv.awards %}
   <div class="cv-block">
     <h3><i class="fa-solid fa-award"></i> Awards</h3>
     <ul class="timeline">
@@ -35,6 +35,8 @@
       {% endfor %}
     </ul>
   </div>
+  {% endif %}
+  {% if include.full and cv.skills %}
   <div class="cv-block">
     <h3><i class="fa-solid fa-screwdriver-wrench"></i> Skills</h3>
     <ul class="plain-list">

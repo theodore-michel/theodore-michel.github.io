@@ -6,6 +6,7 @@
     </button>
     <ul class="nav-links" id="nav-links">
       {% for item in site.nav %}
+        {% if item.section and site.sections[item.section] == false %}{% continue %}{% endif %}
         {% if item.url == "/" %}
           {% assign active = false %}{% if page.url == "/" or page.url == "/index.html" %}{% assign active = true %}{% endif %}
         {% else %}

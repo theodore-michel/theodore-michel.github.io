@@ -1,6 +1,5 @@
 # Things you're working on (status: current) or have worked on (status: past).
 # Current ones appear on the home page and at the top of the Research page.
-# TODO: add what you're working on at the University of Twente.
 
 - title: "ONECYL: benchmarking graph-based CFD surrogates"
   status: current
@@ -10,11 +9,18 @@
   tags: [GNN, surrogate modeling, CFD]
   link: https://arxiv.org/abs/2609.08947
 
-- title: "Current project at the University of Twente"
+- title: "Graph-DRL for flow surrogate modeling and optimization"
   status: current
   summary: >-
-    TODO: one or two sentences on your postdoc research in the Physics of Fluids group.
-  tags: [CFD, AI]
+    Graph neural networks and deep reinforcement learning for flow control and optimization.
+  tags: [GNN, DRL, CFD]
+  link:
+
+- title: "Postdoc at the University of Twente"
+  status: current
+  summary: >-
+    4D-Flow or how to reconstruct blood flow from ultrasound imaging with contrast agents.
+  tags: [ultrasound, deep learning, microbubbles]
   link:
 
 - title: "Towards a digital twin of a solar power plant"

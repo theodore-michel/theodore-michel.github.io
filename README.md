@@ -1,6 +1,6 @@
 # Personal research website
 
-A Jekyll site for GitHub Pages, modeled on [16lemoing.github.io](https://16lemoing.github.io/).
+My Jekyll site for GitHub Pages.
 Pages: **Home** (bio, current work, CV at a glance, news), **Research** (projects,
 publications & preprints, talks), **Blog**, **CV** (inline PDF + download) and **Adventures**.
 
@@ -21,7 +21,25 @@ publications & preprints, talks), **Blog**, **CV** (inline PDF + download) and *
 | Blog posts | `_posts/YYYY-MM-DD-title.md` |
 | Colors and fonts | top of `assets/css/style.css` (`--accent`, etc.) |
 
-Search the repo for `TODO` to find every placeholder.
+## Hidden sections (Blog, Adventures)
+
+Blog and Adventures are switched off for now in `_config.yml`:
+
+```yaml
+sections:
+  blog: false
+  adventures: false
+```
+
+While a section is off, its pages, its nav link, the blog posts and the RSS feed are left out
+of the site. You can keep editing `_posts/` and `_data/adventures.yml` in the meantime.
+To see them locally while you work, run:
+
+```bash
+bundle exec jekyll serve --livereload --config _config.yml,_config_preview.yml
+```
+
+To publish a section, set it to `true` and push.
 
 ## Publish on GitHub Pages
 
