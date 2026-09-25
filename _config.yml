@@ -4,7 +4,7 @@
 
 title: Théodore Michel
 description: >-
-  Théodore Michel — postdoctoral researcher in computational fluid dynamics and machine learning
+  Théodore Michel — postdoctoral researcher in fluid dynamics and machine learning
   at the Physics of Fluids group, University of Twente.
 url: "https://theodore-michel.github.io"
 baseurl: ""                       # leave empty for a <username>.github.io repository
@@ -12,7 +12,7 @@ lang: en
 
 author:
   name: Théodore Michel
-  nickname: Teddy                  # shown under your name on the home page (leave empty to hide)
+  nickname:                  # shown under your name on the home page (leave empty to hide)
   pronouns: he/him
   # Every spelling of your name that appears in author lists — these get bolded.
   aliases:
