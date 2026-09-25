@@ -47,6 +47,18 @@
     });
   });
 
+  // ---- Expand / collapse older news ----
+  var newsBtn = document.querySelector(".news-toggle");
+  if (newsBtn) {
+    newsBtn.addEventListener("click", function () {
+      var expand = newsBtn.getAttribute("aria-expanded") !== "true";
+      document.querySelectorAll(".news-more").forEach(function (li) { li.hidden = !expand; });
+      newsBtn.setAttribute("aria-expanded", expand);
+      newsBtn.title = expand ? "Show less" : "Show older news";
+      newsBtn.setAttribute("aria-label", newsBtn.title);
+    });
+  }
+
   // ---- Publication type filters ----
   var filters = document.querySelectorAll(".filter");
   filters.forEach(function (f) {

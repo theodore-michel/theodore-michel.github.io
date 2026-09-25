@@ -45,12 +45,18 @@ layout: default
 
 <section>
   <h2 class="section-title">News</h2>
-  <ul class="news">
+  {% assign news_shown = 3 %}{% comment %} items visible before the "…" toggle {% endcomment %}
+  <ul class="news" id="news-list">
     {% for n in site.data.news %}
     {% assign d = n.date | split: "-" %}
-    <li><span class="date-badge">{{ d[1] }} / {{ d[0] }}</span><span>{{ n.text | markdownify | remove: "<p>" | remove: "</p>" }}</span></li>
+    <li{% if forloop.index > news_shown %} class="news-more" hidden{% endif %}><span class="date-badge">{{ d[1] }} / {{ d[0] }}</span><span>{{ n.text | markdownify | remove: "<p>" | remove: "</p>" }}</span></li>
     {% endfor %}
   </ul>
+  {% if site.data.news.size > news_shown %}
+  <button class="news-toggle" aria-expanded="false" aria-controls="news-list" aria-label="Show older news" title="Show older news">
+    <span class="dots" aria-hidden="true">•••</span><span class="less"><i class="fa-solid fa-chevron-up"></i> Show less</span>
+  </button>
+  {% endif %}
 </section>
 
 {% if site.posts.size > 0 %}
