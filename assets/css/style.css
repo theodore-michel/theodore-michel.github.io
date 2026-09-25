@@ -205,13 +205,20 @@ section { margin: 0 0 44px; }
   padding: 1px 8px; border-radius: 4px; margin-right: 4px;
   background: var(--bg-soft); color: var(--muted); border: 1px solid var(--border);
 }
-.tag-preprint { background: #fff4e5; color: #9a5b00; border-color: #f3d7a8; }
-.tag-workshop { background: #eef6ee; color: #2f6b36; border-color: #cbe3cd; }
-:root[data-theme="dark"] .tag-preprint { background: #3a2c14; color: #f0c27a; border-color: #5a4521; }
-:root[data-theme="dark"] .tag-workshop { background: #1d3121; color: #9fd3a6; border-color: #2e4a33; }
+.tag-journal    { background: #f3edfb; color: #5b3a8c; border-color: #dccdf0; }
+.tag-conference { background: #fdeef0; color: #9b2c3f; border-color: #f2c9d0; }
+.tag-workshop   { background: #eef6ee; color: #2f6b36; border-color: #cbe3cd; }
+.tag-preprint   { background: #fff4e5; color: #9a5b00; border-color: #f3d7a8; }
+.tag-thesis     { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
+:root[data-theme="dark"] .tag-journal    { background: #2b2140; color: #c9b3ef; border-color: #43355f; }
+:root[data-theme="dark"] .tag-conference { background: #3a1d24; color: #f0a9b6; border-color: #5a2d37; }
+:root[data-theme="dark"] .tag-workshop   { background: #1d3121; color: #9fd3a6; border-color: #2e4a33; }
+:root[data-theme="dark"] .tag-preprint   { background: #3a2c14; color: #f0c27a; border-color: #5a4521; }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .tag-preprint { background: #3a2c14; color: #f0c27a; border-color: #5a4521; }
-  :root:not([data-theme="light"]) .tag-workshop { background: #1d3121; color: #9fd3a6; border-color: #2e4a33; }
+  :root:not([data-theme="light"]) .tag-journal    { background: #2b2140; color: #c9b3ef; border-color: #43355f; }
+  :root:not([data-theme="light"]) .tag-conference { background: #3a1d24; color: #f0a9b6; border-color: #5a2d37; }
+  :root:not([data-theme="light"]) .tag-workshop   { background: #1d3121; color: #9fd3a6; border-color: #2e4a33; }
+  :root:not([data-theme="light"]) .tag-preprint   { background: #3a2c14; color: #f0c27a; border-color: #5a4521; }
 }
 
 /* ============================================================
@@ -384,4 +391,3 @@ section { margin: 0 0 44px; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
 }
-.tag-thesis { background: var(--accent-soft); color: var(--accent); border-color: transparent; }

@@ -21,7 +21,8 @@
     </p>
     <p class="pub-venue">
       <em>{{ pub.venue }}</em>, {{ pub.year }}{% if pub.note %} <span class="pub-note">{{ pub.note }}</span>{% endif %}
-      {% if pub.type == "preprint" %}<span class="tag tag-preprint">Preprint</span>{% elsif pub.type == "workshop" %}<span class="tag tag-workshop">Workshop</span>{% elsif pub.type == "thesis" %}<span class="tag tag-thesis">PhD thesis</span>{% endif %}
+      {% case pub.type %}{% when "journal" %}{% assign type_label = "Journal" %}{% when "conference" %}{% assign type_label = "Conference" %}{% when "workshop" %}{% assign type_label = "Workshop" %}{% when "preprint" %}{% assign type_label = "Preprint" %}{% when "thesis" %}{% assign type_label = "PhD thesis" %}{% else %}{% assign type_label = nil %}{% endcase %}
+      {% if type_label %}<span class="tag tag-{{ pub.type }}">{{ type_label }}</span>{% endif %}
     </p>
     <div class="pub-links">
       {% if pub.links.pdf %}<a class="chip" href="{{ pub.links.pdf }}" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i> pdf</a>{% endif %}
