@@ -3,45 +3,49 @@
 # Optional sections `awards:` and `skills:` (same format) appear on the CV page if added.
 
 education:
-  - when: 2022 – 2025
+  - when: 2022 - 2026
     what: PhD in Computational Mathematics, HPC & Data
-    where: Mines Paris – PSL
+    where: Université PSL, at CEMEF Mines Paris
     detail: "Thesis: Towards a Digital Twin of a Solar Power Plant (CIFRE with TSE)"
-  - when: 2018 – 2022
+  - when: 2018 - 2022
     what: MSc & Executive Engineering in Applied Maths, AI & Big Data
-    where: Mines Paris – PSL
-  - when: 2016 – 2018
+    where: Mines Paris PSL
+  - when: 2016 - 2018
     what: Preparatory classes (CPGE) in Maths & Physics
     where: Lycée Joffre, Montpellier
-  - when: 2014 – 2016
+  - when: 2018
+    what: Music Diploma (saxophone, music theory)
+    where: Conservatoire à Rayonnement Régional de Montpellier
+  - when: 2016
     what: International Baccalaureate
     where: Lycée Jules Guesde, Montpellier
 
 experience:
-  - when: 2026 – present
+  - when: 2026 - present
     what: Postdoctoral Researcher
     where: Physics of Fluids, University of Twente
-    detail: Deep learning for ultrasound super-resolution with contrast agents
+    detail: Deep learning for ultrasound super-resolution with contrast agents, for ERC FALCON
   - when: 2026
     what: Postdoctoral Researcher
-    where: ERC Cure, CEMEF Mines Paris – PSL
-    detail: GNN + deep RL surrogates for turbulent flows
-  - when: 2022 – 2025
-    what: PhD Candidate
-    where: TSE énergie de confiance & Mines Paris – PSL
-    detail: Digital twins of agrivoltaic power plants
+    where: CEMEF Mines Paris PSL
+    detail: GNN + deep RL surrogates for turbulent flows, for ERC Cure
+  - when: 2022 - 2025
+    what: Engineer in Research
+    where: TSE, Bourgoin-Jallieu
+    detail: Digital twins of agrivoltaic power plants (CIFRE PhD)
   - when: 2023
     what: Visiting Researcher
     where: Farhat Research Group, Stanford University
+    detail: Subgrid modeling
   - when: 2022
     what: Climate Risk Analyst Intern
     where: AXA Climate, Paris
   - when: 2021
     what: Research Intern
-    where: IRD Géoazur, Sophia-Antipolis
-  - when: 2020 – 2021
+    where: IRD Géoazur
+  - when: 2020 - 2021
     what: Data Scientist Intern
     where: Solaïs, Sophia-Antipolis
   - when: 2020
     what: Research Intern
-    where: CEMEF Mines Paris – PSL
+    where: CEMEF Mines Paris PSL
