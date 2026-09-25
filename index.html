@@ -6,6 +6,13 @@ layout: default
   <img class="hero-photo" src="{{ a.photo | relative_url }}" alt="Portrait of {{ a.name }}" width="220" height="220">
   <div class="hero-text">
     <h1>{{ a.name }}</h1>
+    {% if a.nickname or a.pronouns %}
+    <p class="hero-aka">
+      {% if a.nickname %}<span>aka <strong>{{ a.nickname }}</strong></span>{% endif %}
+      {% if a.nickname and a.pronouns %}<span aria-hidden="true">·</span>{% endif %}
+      {% if a.pronouns %}<span class="pronouns" title="Pronouns">{{ a.pronouns }}</span>{% endif %}
+    </p>
+    {% endif %}
     <p class="hero-role">{{ a.title }}, <a href="{{ a.affiliation_url }}">{{ a.affiliation }}</a></p>
     <p class="hero-loc"><i class="fa-solid fa-location-dot"></i> {{ a.location }}</p>
     {% include social.html cv=true %}

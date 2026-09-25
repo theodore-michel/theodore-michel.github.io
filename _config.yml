@@ -12,6 +12,8 @@ lang: en
 
 author:
   name: Théodore Michel
+  nickname: Teddy                  # shown under your name on the home page (leave empty to hide)
+  pronouns: he/him
   # Every spelling of your name that appears in author lists — these get bolded.
   aliases:
     - Théodore Michel
