@@ -1,23 +1,42 @@
 # Things you're working on (status: current) or have worked on (status: past).
 # Current ones appear on the home page and at the top of the Research page.
+# TODO: add what you're working on at the University of Twente.
 
-- title: "Current Project One"
+- title: "ONECYL: benchmarking graph-based CFD surrogates"
   status: current
   summary: >-
-    One or two sentences on the question you're exploring and why it matters.
-  tags: [topic-a, topic-b]
-  link:   # optional: repo, project page, or blog post
+    A benchmark of 450 high-fidelity simulations of unsteady flow past a cylinder, across laminar,
+    transitional and high-Reynolds regimes, with a Graph Transformer baseline for long-horizon prediction.
+  tags: [GNN, surrogate modeling, CFD]
+  link: https://arxiv.org/abs/2609.08947
 
-- title: "Current Project Two"
+- title: "Current project at the University of Twente"
   status: current
   summary: >-
-    Another ongoing line of work. Keep it short — link out for details.
-  tags: [topic-c]
-  link: https://github.com/theodore-michel
+    TODO: one or two sentences on your postdoc research in the Physics of Fluids group.
+  tags: [CFD, AI]
+  link:
 
-- title: "Past Project"
+- title: "Towards a digital twin of a solar power plant"
   status: past
   summary: >-
-    A finished project worth showcasing (a thesis, a tool, an open-source library...).
-  tags: [topic-a]
-  link: https://github.com/theodore-michel
+    PhD work combining high-fidelity CFD, adaptive meshing, deep reinforcement learning and graph neural
+    network surrogates to simulate, optimize and predict how solar panel arrays behave in strong winds.
+  tags: [digital twins, CFD, DRL, GNN]
+  link: https://hal.science/tel-05675293
+
+- title: "Deep reinforcement learning for solar panel wind safety"
+  status: past
+  summary: >-
+    Single-step DRL coupled to variational multiscale CFD to find panel tilt angles that minimize
+    aerodynamic loads during high-wind events, beating standard stow strategies.
+  tags: [DRL, flow optimization]
+  link: https://doi.org/10.1063/5.0233709
+
+- title: "Deep learning for earthquake early warning"
+  status: past
+  summary: >-
+    Deep-learning estimation of earthquake magnitude and focal mechanism from prompt elastogravity
+    signals, two minutes after origin time.
+  tags: [deep learning, geophysics]
+  link: https://www.nature.com/articles/s43247-024-01725-9

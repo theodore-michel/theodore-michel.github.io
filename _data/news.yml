@@ -1,10 +1,15 @@
 # Short news items for the home page — newest first. `text` accepts Markdown.
+# TODO: add the month you joined the University of Twente, and anything else.
 
 - date: 2026-09
-  text: "Launched this website! 🎉"
-- date: 2026-06
-  text: "Our paper **Placeholder Title** was accepted to [Conference](https://example.org)."
-- date: 2026-03
-  text: "Released a new preprint on [arXiv](https://arxiv.org)."
-- date: 2025-10
-  text: "Started a PhD at Your Lab, Your University."
+  text: "New preprint: [ONE CYLinder: A Benchmark for Graph-Based Surrogate Modeling of Unsteady Bluff-Body Flows](https://arxiv.org/abs/2609.08947) is on arXiv."
+- date: 2026-02
+  text: "I defended my PhD thesis, [Towards a Digital Twin of a Solar Power Plant](https://hal.science/tel-05675293), at Université PSL."
+- date: 2025-02
+  text: "Presented our work on graph neural networks for CFD at DTE & AICOMAS 2025 in Paris."
+- date: 2024-12
+  text: "Our paper on [combining machine learning and CFD for solar panel tilt optimization in extreme winds](https://doi.org/10.1063/5.0233709) was published in *Physics of Fluids*."
+- date: 2024-10
+  text: "Our paper on [fast characterization of large earthquakes from prompt elastogravity signals](https://www.nature.com/articles/s43247-024-01725-9) was published in *Communications Earth & Environment*."
+- date: 2024-07
+  text: "Presented at the 16th World Congress on Computational Mechanics (WCCM 2024) in Vancouver."

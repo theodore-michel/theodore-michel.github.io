@@ -23,12 +23,13 @@ permalink: /research/
     <a class="btn btn-ghost" href="https://scholar.google.com/citations?user={{ site.social.scholar }}" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Google Scholar</a>
     {% endif %}
   </div>
+  {% assign pub_types = site.data.publications | map: "type" | uniq %}
+  {% assign type_order = "journal,conference,workshop,preprint,thesis" | split: "," %}
   <div class="filters" role="group" aria-label="Filter publications">
     <button class="filter active" data-filter="all" aria-pressed="true">All</button>
-    <button class="filter" data-filter="conference" aria-pressed="false">Conference</button>
-    <button class="filter" data-filter="journal" aria-pressed="false">Journal</button>
-    <button class="filter" data-filter="preprint" aria-pressed="false">Preprints</button>
-    <button class="filter" data-filter="workshop" aria-pressed="false">Workshop</button>
+    {% for t in type_order %}{% if pub_types contains t %}
+    <button class="filter" data-filter="{{ t }}" aria-pressed="false">{% case t %}{% when "journal" %}Journal articles{% when "conference" %}Conference{% when "workshop" %}Workshop{% when "preprint" %}Preprints{% when "thesis" %}Thesis{% endcase %}</button>
+    {% endif %}{% endfor %}
   </div>
   <div class="pub-list">
     {% for pub in site.data.publications %}

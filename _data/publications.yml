@@ -1,68 +1,223 @@
-# Publications, preprints and workshop papers — newest first.
-# `type` is one of: conference | journal | preprint | workshop
+# Publications, preprints, theses and conference contributions — newest first.
+# Imported from Google Scholar (user=sjxk_lMAAAAJ), with abstracts from arXiv,
+# HAL and Crossref.
+#
+# `type` is one of: journal | conference | workshop | preprint | thesis
 # Every field except title/authors/venue/year/type is optional; links that are
-# left out simply don't render. Put thumbnails in assets/img/pubs/.
+# left out simply don't render. Put thumbnails in assets/img/pubs/ and set `image`.
 # Author names listed in `author.aliases` (_config.yml) are bolded automatically.
 
-- id: example-preprint-2026
+- id: onecyl-2026
   type: preprint
-  title: "Placeholder Title of My Latest Preprint"
-  authors: [Theodore Michel, Jane Collaborator, John Advisor]
-  venue: arXiv preprint
+  title: "ONE CYLinder: A Benchmark for Graph-Based Surrogate Modeling of Unsteady Bluff-Body Flows"
+  authors: [Théodore Michel, Antoine Campos, Alban Dujardin, Henry Areiza, Philippe Meliga, Elie Hachem]
+  venue: arXiv preprint arXiv:2609.08947
   year: 2026
-  image:  # e.g. /assets/img/pubs/preprint2026.png
+  image:  # /assets/img/pubs/onecyl.png
   links:
-    arxiv: https://arxiv.org/abs/0000.00000
-    code: https://github.com/theodore-michel
+    pdf: https://arxiv.org/pdf/2609.08947
+    arxiv: https://arxiv.org/abs/2609.08947
   abstract: >-
-    One or two paragraphs describing the problem, the method and the main
-    result. This text is revealed when a visitor clicks "abstract".
+    Graph-based surrogate models offer a promising route to accelerate computational fluid dynamics (CFD)
+    simulations on unstructured meshes. However, their development is limited by the scarcity of benchmark
+    datasets spanning multiple flow regimes and standardized protocols for long-horizon autoregressive
+    prediction. We introduce ONECYL (ONE CYLinder), a new benchmark for unsteady flow past a circular cylinder
+    across laminar, transitional, and high-Reynolds-number regimes. The benchmark comprises 450 high-fidelity
+    Variational Multiscale finite-element simulations (270,000 flow snapshots) with randomized cylinder
+    geometries, providing time-resolved velocity and pressure fields together with mesh connectivity, geometric
+    descriptors, Reynolds numbers, and integrated aerodynamic quantities. Beyond the dataset, ONECYL establishes
+    a unified evaluation framework combining full-field rollout errors, virtual probes, and drag and lift
+    predictions to assess numerical accuracy and physical fidelity. To accompany the benchmark, we develop a
+    Graph Transformer as a reference baseline predicting velocity and pressure fields autoregressively on
+    unstructured meshes. Using ONECYL, we investigate geometric representations and physics-based regularization
+    across the three Reynolds-number regimes. The results show that explicitly encoding the cylinder geometry
+    through a level-set representation consistently improves long-horizon prediction accuracy and generalization
+    to unseen geometries, while divergence-based regularization becomes increasingly beneficial as flow
+    complexity increases. The ONECYL benchmark and its Graph Transformer baseline provide a reproducible
+    framework for evaluating graph-based surrogate models and establish a foundation for future research on
+    long-horizon prediction of unsteady bluff-body flows.
   bibtex: |
-    @article{michel2026placeholder,
-      title   = {Placeholder Title of My Latest Preprint},
-      author  = {Michel, Theodore and Collaborator, Jane and Advisor, John},
-      journal = {arXiv preprint arXiv:0000.00000},
+    @article{michel2026onecyl,
+      title   = {{ONE CYLinder}: A Benchmark for Graph-Based Surrogate Modeling of Unsteady Bluff-Body Flows},
+      author  = {Michel, Th{\'e}odore and Campos, Antoine and Dujardin, Alban and Areiza, Henry and Meliga, Philippe and Hachem, Elie},
+      journal = {arXiv preprint arXiv:2609.08947},
       year    = {2026}
     }
 
-- id: example-conference-2025
-  type: conference
-  title: "Placeholder Title of a Conference Paper"
-  authors: [Jane Collaborator, Theodore Michel, John Advisor]
-  venue: Conference Name (e.g. NeurIPS)
-  year: 2025
-  note: "(Oral)"
+- id: phd-thesis-2026
+  type: thesis
+  title: "Towards a Digital Twin of a Solar Power Plant"
+  authors: [Théodore Michel]
+  venue: PhD thesis, Université Paris Sciences et Lettres (PSL)
+  year: 2026
   links:
-    pdf: https://example.org/paper.pdf
-    project: https://example.org
-    code: https://github.com/theodore-michel
-    slides: https://example.org/slides.pdf
+    pdf: https://hal.science/tel-05675293/document
+    project: https://hal.science/tel-05675293
+    project_label: HAL
   abstract: >-
-    Short abstract of the conference paper.
+    This thesis presents a first major step towards the development of digital twins for industrial-scale solar
+    power plants, with a focus on agrivoltaic systems. As recent innovative solar energy systems face increasing
+    pressures from environmental hazards such as windstorms, there is a strong need for developing
+    rapidly-assessed models (such as digital twins) of real-world power plants to support industrial
+    decision-making in design, monitoring, and operation. Such models would contribute to the development of
+    renewable energy technologies tailored to site conditions and operational requirements, which applied to
+    agrivoltaics would ultimately accelerate Europe's green energy transition. Our work proposes a comprehensive
+    and adaptable framework, that combines high-fidelity computational fluid dynamics (CFD) simulations, adaptive
+    meshing, deep reinforcement learning (DRL) optimization techniques, and graph neural network (GNN) surrogate
+    modeling to accurately simulate, optimize, and predict the performance of solar panel arrays under various
+    wind conditions. This work, along with discussions on the remaining steps to achieve a full digital twin with
+    in-situ feedback loops, shows the feasibility and potential of using advanced numerical methods and machine
+    learning approaches to create digital twins of solar power plants.
   bibtex: |
-    @inproceedings{collaborator2025placeholder,
-      title     = {Placeholder Title of a Conference Paper},
-      author    = {Collaborator, Jane and Michel, Theodore and Advisor, John},
-      booktitle = {Conference Name},
+    @phdthesis{michel2026thesis,
+      title  = {Towards a Digital Twin of a Solar Power Plant},
+      author = {Michel, Th{\'e}odore},
+      school = {Universit{\'e} Paris Sciences et Lettres},
+      year   = {2026},
+      url    = {https://hal.science/tel-05675293}
+    }
+
+- id: dte-aicomas-2025
+  type: conference
+  title: "Graph neural networks for CFD space and time prediction: an application to solar panels"
+  authors: [Théodore Michel, Paul Garnier, Philippe Meliga, Elie Hachem]
+  venue: 3rd IACM Digital Twins in Engineering Conference (DTE 2025) & 1st ECCOMAS AICOMAS 2025, Paris
+  year: 2025
+  links:
+    pdf: https://congressarchive.cimne.com/dte_aicomas_2025/abstracts/5ab0e4b68fcd11efb344000c29ddfc0c.pdf
+    project: https://hal.science/hal-05376883
+    project_label: HAL
+  abstract: >-
+    Modeling the complex aerodynamics of solar power plants with precision is crucial for ensuring their safety
+    in wind flow. Factors like scale, positioning, and wind exposure significantly affect the complexity of
+    simulations, making it more challenging to accurately capture the behavior of turbulent wind interactions in
+    large-scale panel arrays. In power plants using solar trackers, the variable tilt of the panels and
+    fluctuating wind conditions further complicate the problem, especially when time-dependent and directional
+    wind changes are considered. While Computational Fluid Dynamics (CFD) simulations offer high-fidelity
+    modeling, their computational cost increases significantly with the mesh resolution required for large-scale
+    configurations, limiting their feasibility in industrial applications. To overcome these computational
+    challenges, we apply advanced machine learning methods, specifically Graph Neural Networks…
+  bibtex: |
+    @inproceedings{michel2025gnn,
+      title     = {Graph neural networks for {CFD} space and time prediction: an application to solar panels},
+      author    = {Michel, Th{\'e}odore and Garnier, Paul and Meliga, Philippe and Hachem, Elie},
+      booktitle = {3rd IACM Digital Twins in Engineering Conference (DTE 2025) \& 1st ECCOMAS Artificial Intelligence and Computational Methods in Applied Science (AICOMAS 2025)},
+      address   = {Paris, France},
       year      = {2025}
     }
 
-- id: example-journal-2024
+- id: pof-2024
   type: journal
-  title: "Placeholder Title of a Journal Article"
-  authors: [Theodore Michel, John Advisor]
-  venue: Journal Name
+  title: "Combining machine learning and computational fluid dynamics for solar panel tilt angle optimization in extreme winds"
+  authors: [Théodore Michel, A. Ansaldi, Jonathan Viquerat, Philippe Meliga, Elie Hachem]
+  venue: Physics of Fluids 36 (12), 125186
   year: 2024
   links:
-    pdf: https://example.org/article.pdf
+    pdf: https://pubs.aip.org/aip/pof/article/36/12/125186/3326090
+    project: https://doi.org/10.1063/5.0233709
+    project_label: DOI
   abstract: >-
-    Short abstract of the journal article.
+    Although a key driver for green energy development, solar photovoltaic power plants face the major risk of
+    severe wind damages, as there is currently no best practice on how to best stow the panels under strong wind
+    conditions. In this research, an out-of-the-box numerical framework is introduced to inform the discussion
+    around panel design and recommended stow positions, one that leverages the increasing use of solar tracker
+    actuators, that allows panels to set an optimal angle relative to the sun to maximize power output, and
+    incidentally offer a great potential for optimal safeguarding through individual panel piloting. The task of
+    concurrently optimizing multiple panel tilts in a turbulent atmospheric boundary layer wind flow is modeled as
+    a Markov decision process and solved with a single-step deep reinforcement learning algorithm, intended for
+    situations where the optimal policy to be learnt by a neural network does not depend on state. The numerical
+    reward fed to the neural network is computed from high-fidelity numerical simulations combining variational
+    multiscale modeling of the Navier–Stokes equations and anisotropic boundary layer mesh adaptation, to
+    accurately represent critical flow features at affordable computational costs, regardless of the panel tilts
+    chosen by the learning agent. A range of experiments is performed across various learning objectives
+    accounting for different possible causes of breakage (such as tear, vibrations, and fatigue), for which the
+    proposed approach successfully minimizes the aerodynamic efforts on two-dimensional and three-dimensional
+    arrangements of six ground-mounted panels under an incident wind speed of 50 km/h, while outperforming
+    baseline safeguarding practices considered in the literature by several dozen per cent. This gives hope that,
+    by interacting with its computational fluid dynamics environment in a trial-and-error manner, a deep
+    reinforcement learning agent can learn unexpected solutions to this complex decision-making problem and come
+    up with innovative, feasible solutions capable of managing utility-scale solar assets during high-wind events
+    while efficiently complementing engineering intuition and practical experience.
+  bibtex: |
+    @article{michel2024combining,
+      title   = {Combining machine learning and computational fluid dynamics for solar panel tilt angle optimization in extreme winds},
+      author  = {Michel, Th{\'e}odore and Ansaldi, A. and Viquerat, Jonathan and Meliga, Philippe and Hachem, Elie},
+      journal = {Physics of Fluids},
+      volume  = {36},
+      number  = {12},
+      pages   = {125186},
+      year    = {2024},
+      publisher = {AIP Publishing},
+      doi     = {10.1063/5.0233709}
+    }
 
-- id: example-workshop-2024
-  type: workshop
-  title: "Placeholder Title of a Workshop Paper"
-  authors: [Theodore Michel, Jane Collaborator]
-  venue: Workshop Name @ Conference
+- id: commsenv-2024
+  type: journal
+  title: "Fast and full characterization of large earthquakes from prompt elastogravity signals"
+  authors: [Kévin Juhel, Quentin Bletery, Andrea Licciardi, Martin Vallée, Céline Hourcade, Théodore Michel]
+  venue: Communications Earth & Environment 5, 561
   year: 2024
   links:
-    pdf: https://example.org/workshop.pdf
+    pdf: https://www.nature.com/articles/s43247-024-01725-9
+    project: https://insu.hal.science/insu-04841455
+    project_label: HAL
+  abstract: >-
+    Prompt ElastoGravity Signals are light-speed gravity-induced signals recorded before the arrival of seismic
+    waves. They have raised interest for early warning applications but their weak amplitudes close to the
+    background seismic noise have questioned their actual potential for operational use. A deep-learning model has
+    recently demonstrated its ability to mitigate this noise limitation and to provide in near real-time the
+    earthquake magnitude (Mw). However, this approach was efficient only for large earthquakes (Mw ≥ 8.3) of known
+    focal mechanism. Here we show unprecedented performance in full earthquake characterization using the dense
+    broadband seismic network deployed in Alaska and Western Canada. Our deep-learning model provides accurate
+    magnitude and focal mechanism estimates of Mw ≥ 7.8 earthquakes, 2 minutes after origin time (hence the
+    tsunamigenic potential). Our results represent a major step towards the routine use of prompt elastogravity
+    signals in operational warning systems, and demonstrate its potential for tsunami warning in
+    densely-instrumented areas.
+  bibtex: |
+    @article{juhel2024fast,
+      title   = {Fast and full characterization of large earthquakes from prompt elastogravity signals},
+      author  = {Juhel, K{\'e}vin and Bletery, Quentin and Licciardi, Andrea and Vall{\'e}e, Martin and Hourcade, C{\'e}line and Michel, Th{\'e}odore},
+      journal = {Communications Earth \& Environment},
+      volume  = {5},
+      number  = {1},
+      pages   = {561},
+      year    = {2024},
+      publisher = {Nature Publishing Group UK},
+      doi     = {10.1038/s43247-024-01725-9}
+    }
+
+- id: wccm-2024
+  type: conference
+  title: "Deep reinforcement learning-based flow optimization for improved wind resilience of solar panel arrays"
+  authors: [Théodore Michel, Philippe Meliga, Elie Hachem]
+  venue: 16th World Congress on Computational Mechanics (WCCM 2024), Vancouver
+  year: 2024
+  links:
+    project: https://hal.science/hal-04750782
+    project_label: HAL
+  bibtex: |
+    @inproceedings{michel2024wccm,
+      title     = {Deep reinforcement learning-based flow optimization for improved wind resilience of solar panel arrays},
+      author    = {Michel, Th{\'e}odore and Meliga, Philippe and Hachem, Elie},
+      booktitle = {16th World Congress on Computational Mechanics},
+      address   = {Vancouver, Canada},
+      year      = {2024}
+    }
+
+- id: ercoftac-2024
+  type: workshop
+  title: "Flow optimization using deep reinforcement learning for safety preserving of solar panels facing wind risks"
+  authors: [Théodore Michel, Philippe Meliga, Paolo Massarotti, Elie Hachem]
+  venue: 1st ERCOFTAC Workshop on Machine Learning for Fluid Dynamics, Paris
+  year: 2024
+  links:
+    project: https://hal.science/hal-04750783
+    project_label: HAL
+  bibtex: |
+    @inproceedings{michel2024ercoftac,
+      title     = {Flow optimization using deep reinforcement learning for safety preserving of solar panels facing wind risks},
+      author    = {Michel, Th{\'e}odore and Meliga, Philippe and Massarotti, Paolo and Hachem, Elie},
+      booktitle = {1st ERCOFTAC Workshop on Machine Learning for Fluid Dynamics},
+      address   = {Paris, France},
+      year      = {2024}
+    }

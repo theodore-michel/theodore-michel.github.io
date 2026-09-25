@@ -1,16 +1,21 @@
 # Talks, posters and presentations — newest first.
+# Pre-filled from the conference contributions on Google Scholar / HAL.
+# TODO: check the format (talk vs poster) and add slides/video links if you have them.
 
-- date: 2026-05
-  title: "Placeholder Talk Title"
-  event: Seminar Name
-  location: University, City, Country
+- date: 2025-02
+  title: "Graph neural networks for CFD space and time prediction: an application to solar panels"
+  event: DTE 2025 & AICOMAS 2025 (IACM / ECCOMAS)
+  location: Paris, France
   links:
-    slides: https://example.org/slides.pdf
-    video: https://youtube.com
+    slides:
+    video:
 
-- date: 2025-11
-  title: "Placeholder Poster Title"
-  event: Conference Name (poster)
-  location: City, Country
-  links:
-    slides: https://example.org/poster.pdf
+- date: 2024-07
+  title: "Deep reinforcement learning-based flow optimization for improved wind resilience of solar panel arrays"
+  event: 16th World Congress on Computational Mechanics (WCCM 2024)
+  location: Vancouver, Canada
+
+- date: 2024-03
+  title: "Flow optimization using deep reinforcement learning for safety preserving of solar panels facing wind risks"
+  event: 1st ERCOFTAC Workshop on Machine Learning for Fluid Dynamics
+  location: Paris, France

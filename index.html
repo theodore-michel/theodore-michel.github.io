@@ -13,12 +13,19 @@ layout: default
 </section>
 
 <section class="bio">
-  {% comment %} TODO: Write your bio here (HTML or plain text). {% endcomment %}
+  {% comment %} TODO: Rewrite this bio in your own words. {% endcomment %}
   <p>
-    I am a <strong>{{ a.title }}</strong> at <a href="{{ a.affiliation_url }}">{{ a.affiliation }}</a>,
-    working with <a href="https://example.org">Prof. Advisor Name</a>. My research focuses on
-    <em>your research area</em> — in particular, <em>a specific question</em> and <em>another specific question</em>.
-    Before that, I received an MSc from <a href="https://example.org">Another University</a>.
+    I am a <strong>{{ a.title }}</strong> in the <a href="{{ a.affiliation_url }}">{{ a.affiliation }}</a>.
+    My research sits at the intersection of <em>computational fluid dynamics</em>, <em>machine learning</em>
+    and <em>high-performance computing</em>, with the goal of building fast, reliable
+    <em>digital twins</em> of real-world flow systems.
+  </p>
+  <p>
+    I completed my PhD at <a href="https://psl.eu/en">Université PSL</a> in 2026 with a thesis on
+    <a href="https://hal.science/tel-05675293">building a digital twin of a solar power plant</a>, combining
+    high-fidelity CFD, adaptive meshing, deep reinforcement learning and graph neural network surrogates to
+    predict and optimize how solar panel arrays behave in strong winds. More recently I have been working on
+    benchmarks for graph-based surrogate models of unsteady flows.
   </p>
   <p>
     I'm always happy to chat about research, collaborations or opportunities —

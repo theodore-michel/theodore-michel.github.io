@@ -21,13 +21,13 @@
     </p>
     <p class="pub-venue">
       <em>{{ pub.venue }}</em>, {{ pub.year }}{% if pub.note %} <span class="pub-note">{{ pub.note }}</span>{% endif %}
-      {% if pub.type == "preprint" %}<span class="tag tag-preprint">Preprint</span>{% elsif pub.type == "workshop" %}<span class="tag tag-workshop">Workshop</span>{% endif %}
+      {% if pub.type == "preprint" %}<span class="tag tag-preprint">Preprint</span>{% elsif pub.type == "workshop" %}<span class="tag tag-workshop">Workshop</span>{% elsif pub.type == "thesis" %}<span class="tag tag-thesis">PhD thesis</span>{% endif %}
     </p>
     <div class="pub-links">
       {% if pub.links.pdf %}<a class="chip" href="{{ pub.links.pdf }}" target="_blank" rel="noopener"><i class="fa-regular fa-file-pdf"></i> pdf</a>{% endif %}
       {% if pub.links.arxiv %}<a class="chip" href="{{ pub.links.arxiv }}" target="_blank" rel="noopener"><i class="ai ai-arxiv"></i> arXiv</a>{% endif %}
       {% if pub.links.code %}<a class="chip" href="{{ pub.links.code }}" target="_blank" rel="noopener"><i class="fa-solid fa-code"></i> code</a>{% endif %}
-      {% if pub.links.project %}<a class="chip" href="{{ pub.links.project }}" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> project page</a>{% endif %}
+      {% if pub.links.project %}<a class="chip" href="{{ pub.links.project }}" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> {{ pub.links.project_label | default: "page" }}</a>{% endif %}
       {% if pub.links.slides %}<a class="chip" href="{{ pub.links.slides }}" target="_blank" rel="noopener"><i class="fa-solid fa-person-chalkboard"></i> slides</a>{% endif %}
       {% if pub.links.video %}<a class="chip" href="{{ pub.links.video }}" target="_blank" rel="noopener"><i class="fa-solid fa-play"></i> video</a>{% endif %}
       {% if pub.abstract %}<button class="chip" data-toggle="abs-{{ pid }}" aria-expanded="false" aria-controls="abs-{{ pid }}"><i class="fa-solid fa-align-left"></i> abstract</button>{% endif %}

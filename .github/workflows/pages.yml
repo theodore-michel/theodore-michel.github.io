@@ -18,6 +18,9 @@ concurrency:
 
 jobs:
   build:
+    # Nothing is published while the repository is private. Make it public
+    # (Settings → General → Danger Zone → Change visibility) to go live.
+    if: ${{ !github.event.repository.private }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

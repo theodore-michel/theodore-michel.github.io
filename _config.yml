@@ -3,34 +3,36 @@
 #  Anything marked TODO is a placeholder you should replace.
 # ---------------------------------------------------------------
 
-title: Theodore Michel            # TODO: shown in the browser tab and nav bar
-description: >-                   # TODO: used for search engines / link previews
-  Personal website of Theodore Michel — research, publications, blog and more.
-url: "https://theodore-michel.github.io"   # TODO: https://<your-github-username>.github.io
+title: Théodore Michel
+description: >-
+  Théodore Michel — postdoctoral researcher in computational fluid dynamics and machine learning
+  at the Physics of Fluids group, University of Twente.
+url: "https://theodore-michel.github.io"
 baseurl: ""                       # leave empty for a <username>.github.io repository
 lang: en
 
 author:
-  name: Theodore Michel           # TODO
+  name: Théodore Michel
   # Every spelling of your name that appears in author lists — these get bolded.
   aliases:
+    - Théodore Michel
     - Theodore Michel
     - T. Michel
-  title: PhD Researcher           # TODO: e.g. "PhD Student", "Research Scientist"
-  affiliation: Your Lab, Your University   # TODO
-  affiliation_url: "https://example.org"   # TODO
-  location: City, Country         # TODO
+  title: Postdoctoral Researcher
+  affiliation: Physics of Fluids group, University of Twente
+  affiliation_url: "https://pof.tnw.utwente.nl/"
+  location: Enschede, the Netherlands
   photo: /assets/img/profile.svg  # TODO: replace with e.g. /assets/img/profile.jpg (square, ≥ 400px)
   cv_pdf: /assets/cv/cv.pdf       # TODO: drop your real CV at this path
 
 # Contact / social links — shown as icon buttons on the home page and footer.
 # Remove a line (or leave it empty) to hide that icon.
 social:
-  email: herodote110@gmail.com                                   # TODO: the address you want public
+  email: theodore.michel@utwente.nl
   github: theodore-michel                                        # GitHub username
-  scholar: "YOUR_SCHOLAR_ID"                                     # TODO: the ?user=XXXX part of your Scholar URL
+  scholar: "sjxk_lMAAAAJ"
   linkedin: "your-linkedin-handle"                               # TODO: linkedin.com/in/<handle>
-  orcid: ""                                                      # optional, e.g. 0000-0002-1825-0097
+  orcid: "0009-0004-1161-7337"
   twitter: ""                                                    # optional, X/Twitter handle without @
   bluesky: ""                                                    # optional, e.g. you.bsky.social
 

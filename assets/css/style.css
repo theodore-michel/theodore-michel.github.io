@@ -366,3 +366,4 @@ section { margin: 0 0 44px; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
 }
+.tag-thesis { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
