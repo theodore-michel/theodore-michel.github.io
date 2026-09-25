@@ -1,13 +1,12 @@
 # Things you're working on (status: current) or have worked on (status: past).
 # Current ones appear on the home page and at the top of the Research page.
 
-- title: "ONECYL: benchmarking graph-based CFD surrogates"
+- title: "Postdoc at the University of Twente"
   status: current
   summary: >-
-    A benchmark of 450 high-fidelity simulations of unsteady flow past a cylinder, across laminar,
-    transitional and high-Reynolds regimes, with a Graph Transformer baseline for long-horizon prediction.
-  tags: [GNN, surrogate modeling, CFD]
-  link: https://arxiv.org/abs/2609.08947
+    4D-Flow or how to reconstruct blood flow from ultrasound imaging with contrast agents.
+  tags: [ultrasound, deep learning, microbubbles]
+  link:
 
 - title: "Graph-DRL for flow surrogate modeling and optimization"
   status: current
@@ -16,12 +15,13 @@
   tags: [GNN, DRL, CFD]
   link:
 
-- title: "Postdoc at the University of Twente"
+- title: "ONECYL: benchmarking graph-based CFD surrogates"
   status: current
   summary: >-
-    4D-Flow or how to reconstruct blood flow from ultrasound imaging with contrast agents.
-  tags: [ultrasound, deep learning, microbubbles]
-  link:
+    A benchmark of 450 high-fidelity simulations of unsteady flow past a cylinder, across laminar,
+    transitional and high-Reynolds regimes, with a Graph Transformer baseline for long-horizon prediction.
+  tags: [GNN, surrogate modeling, CFD]
+  link: https://arxiv.org/abs/2609.08947
 
 - title: "Towards a digital twin of a solar power plant"
   status: past
